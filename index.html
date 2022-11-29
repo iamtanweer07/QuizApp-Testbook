@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <script src="/js/script_1.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Front Page -->
+<div class="container">
+  <div class="mainBox">
+    <div class="logo_title">
+      <img src="./images/testbooklogo.png" alt="">
+      <h1 id="headerTitle">Hello user!</h1>
+      <h4>Enter your name to continue the Quiz.</h4>
+     </div>
+  </div>
+   <div class="inpbtn">
+      <input type="text" name="textinput" id="inputfield" placeholder="ENTER YOUR NAME" autofocus> <br>
+      <button type="button" id="SelectCategory">Click Here</button>
+      <p class="lines">You'll have 15 seconds to answer each questions</p>
+   </div> 
+
+   <div id="displayCategories">
+      <h1 class="selectcategories">Select Category</h1>
+    <div class="categories">
+      <input type="button" name="JavaScript" class="categories1" id="jsbtn" value="JavaScript">
+      <input type="button" name="Data Structures" class="categories1" id="dsbtn" value="Data Structures">
+      <input type="button" name="CSS" class="categories1" id="cssbtn" value="CSS">
+      <input type="button" name="HTML" class="categories1" id="htmlbtn" value="HTML">
+    </div>
+   </div> 
+</div>
+<!-- Front Page end-->
+
+<!-- Quiz box  start-->
+<div class="quiz_box">
+  <div class="title">JavaScript</div>
+ <div class="ques_header">
+ <div class="countdown"><span>00</span></div>
+  <div class="scored">SCORE: <span id="score">0</span></div>
+</div>
+<div class="total_ques"><span>1/5</span>
+</div>
+
+  <div class="ques_text">
+        <span class="question1"></span>
+      </div>
+      <div class="option_list">
+        <div class="options">
+          <span id="opt1" data-opt="1"  onclick="checkAns(this)"></span>
+        </div>
+  
+        <div class="options">
+          <span id="opt2" data-opt="2" onclick="checkAns(this)"></span>
+        </div>
+  
+        <div class="options">
+          <span id="opt3" data-opt="3"  onclick="checkAns(this)"></span>
+        </div>
+  
+        <div class="options">
+          <span id="opt4" data-opt="4"  onclick="checkAns(this)"></span>
+        </div>
+      </div>
+
+<footer class="Nextbtn">
+   <button class="next_btn" id="nextbutton">Next Question</button>
+</footer> 
+</div>
+
+<!-- Quiz box  end-->
+
+
+<!-- Result box start -->
+
+<div class="result_box">
+ <div class="title_header">Quiz Result</div>
+ <div class="nameAndResult">
+  <p id="yourname">your result is:</p>
+ </div>
+<div class="time_taken">
+  <p>Total Time Taken:<span id="timeTaken">15</span> Seconds</p>
+</div>
+<div class="total_Quest">
+  <p>Total Question:<span id="totalQuestion">5</span></p>
+</div>
+
+<div class="ques_attempt">
+  <p>Attempt:<span id="questionAttempt"> 0</span></p>
+</div>
+
+<div class="correct_attempt">
+  <p>Correct:<span id="correctAttempt"> 0</span></p>
+</div>
+
+<div class="wrong_attempt">
+  <p>Wrong:<span id="wrongAttempt"> 0</span></p>
+</div>
+
+<div class="percent">
+  <p>Percentage:<span id="percentage"></span></p>
+</div>
+
+ <div class="resultbuttons">
+  <button id="startbutn">Start Again</button>
+  <button id="gotohome">Go to Home</button>
+ </div>
+</div>
+
+<!-- Result box end -->
+  <script src="./js/questions.js"></script>
+  <script src="./js/script.js"></script>
+ 
+</body>
+</html>
